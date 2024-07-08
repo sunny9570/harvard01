@@ -13,7 +13,7 @@ $(function () {
     const mainVisualSlide = new Swiper('.main_visual_slide', {
         // parallax: true,
         loop: true,
-        speed: 1000,
+        speed: 1500,
         autoplay: {
             delay: 2500,
             // disableOnInteraction: false,
@@ -24,5 +24,7 @@ $(function () {
             prevEl: '#mainVisual .arrows .prev',
         },
     });
+
+    AOS.init();
 
 })
