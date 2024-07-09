@@ -25,26 +25,47 @@
     height: 56px;
 }
 
-#header button {
-    position: relative;
+#header .utils {
+    display: flex;
+    gap: 4px;
+}
+
+#header .utils button {
+    /* position: relative; */
     z-index: 999;
     background: rgba(26, 25, 29, 0.8);
     padding: 16px 40px;
 }
 
-#header button strong {
+#header .utils button strong {
     color: #ddd;
     font-size: 20px;
     font-weight: 300;
     margin-right: 16px
 }
 
-#header button i {
+#header .utils button i {
     display: inline-block;
     color: #fff;
     font-size: 20px;
     vertical-align: -2px;
 }
+
+#header .utils .search {
+    position: relative;
+}
+
+#header .utils #search {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(26, 25, 29, 1);
+    width: 400px;
+    z-index: 1000;
+}
+
+#header .mbtn {}
 
 #header .mbtn .xi-close {
     display: none;
@@ -57,6 +78,9 @@
 #header .mbtn.on .xi-close {
     display: inline-block;
 }
+
+
+
 
 .gnb {
     position: fixed;
@@ -333,20 +357,155 @@
 }
 
 .main_banner {
-    padding: 0;
-}
-
-
-.search {
     position: relative;
+    padding: 200px 0;
+    background: url(../images/main_banner01.jpg) no-repeat center/cover;
 }
 
-#search {
-    display: none;
+
+.main_banner::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    z-index: 2;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1)1%, rgba(0, 0, 0, 0)45%, rgba(0, 0, 0, 1)50%);
+}
+
+.main_banner .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(0, -50%);
+}
+
+.main_banner .title h2 {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 16px;
+    line-height: 48px;
+
+}
+
+.main_banner .title p {
+    color: #fff;
+    margin-bottom: 40px;
+
+}
+
+.main_banner .title .btn a {
+    display: inline-block;
+    color: #fff;
+    background: #a51c30;
+    padding: 16px 32px;
+}
+
+
+.main_banner .title .btn i {
+    vertical-align: -2px;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+.main_professor {
+    padding: 200px 0;
+}
+
+.main_professor .title {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    margin: 0 auto 56px auto;
+    border-bottom: 3px solid #575757;
+    padding-bottom: 16px;
+}
+
+.main_professor .inner {
+    display: flex;
+}
+
+.main_professor .inner>* {
+    flex: 1;
+}
+
+.main_professor .right {
+    display: flex;
+    align-items: center;
+}
+
+.main_professor .right strong {
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #b9b7b7;
+}
+
+.main_professor .right .first {
+    position: relative;
+
+}
+
+.main_professor .right .first::after {
+    content: attr(data-txt);
     position: absolute;
     top: 0;
-    right: 0;
-    background: rgba(26, 25, 29, 1);
-    width: 400px;
-    z-index: 1000;
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    color: #444;
+    /* border-right: 1px solid #444; */
+
+    animation: txt 4s steps(20);
+}
+
+@keyframes txt {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+
+    /* 100% {
+        width: 0;
+    } */
+}
+
+
+.main_professor .right p {
+    margin: 16px 0 24px 0;
+    color: #615f5f;
+}
+
+.main_professor .right em {
+    display: block;
+    font-size: 14px;
+    font-weight: 800;
+    color: #4a484c;
+    margin-bottom: 40px;
+}
+
+.main_professor .right .btn_box {
+    display: flex;
+    align-items: center;
+}
+
+.main_professor .right .btn_box p {
+    font-weight: 800;
+    margin-right: 40px;
+}
+
+.main_professor .right .btn_box a {
+    display: inline-block;
+    color: #fff;
+    background: #a51c30;
+    padding: 12px 28px;
+}
+
+.main_professor .right .btn_box i {
+    vertical-align: -2px;
+    margin-left: 8px;
+    font-size: 14px;
 }
