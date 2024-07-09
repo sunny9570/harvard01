@@ -7,6 +7,7 @@
 }
 
 #header .inner {
+    position: relative;
     display: flex;
     justify-content: space-between;
 }
@@ -15,6 +16,9 @@
     display: flex;
     align-items: center;
     height: 100px;
+
+    position: relative;
+    z-index: 999;
 }
 
 #header h1 img {
@@ -22,7 +26,8 @@
 }
 
 #header button {
-    top: 0;
+    position: relative;
+    z-index: 999;
     background: rgba(26, 25, 29, 0.8);
     padding: 16px 40px;
 }
@@ -39,6 +44,77 @@
     color: #fff;
     font-size: 20px;
     vertical-align: -2px;
+}
+
+#header .mbtn .xi-close {
+    display: none;
+}
+
+#header .mbtn.on .xi-bars {
+    display: none;
+}
+
+#header .mbtn.on .xi-close {
+    display: inline-block;
+}
+
+.gnb {
+    position: fixed;
+    inset: 0 0 0 0;
+    background: #111;
+    color: #fff;
+    padding: 160px 0 0 112px;
+    transform: translate(0, -100%);
+
+    transition: 0.5s;
+}
+
+.gnb.on {
+    transform: translate(0, 0);
+}
+
+.gnb>ul {
+    position: relative;
+}
+
+.gnb>ul>li:hover>a {
+    color: #a51c30;
+}
+
+.gnb>ul>li>a {
+    display: block;
+    font-family: "Hahmlet", serif;
+
+    font-size: 48px;
+    line-height: 80px;
+    color: #f9f9f9;
+}
+
+.gnb>ul>li ul {
+    display: none;
+    position: absolute;
+    top: 16px;
+    left: 20%;
+}
+
+.gnb>ul>li:hover ul {
+    display: block;
+}
+
+.gnb>ul>li ul li a {
+    font-size: 20px;
+    line-height: 56px;
+}
+
+.gnb>ul>li ul li:hover a {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #555554;
+
+}
+
+.gnb>ul>li ul li a i {
+    font-size: 10px;
+    margin-left: 8px;
 }
 
 
@@ -165,11 +241,11 @@
 
     display: flex;
     /* justify-content: center; */
-    gap: 96px;
+    gap: 124px;
     align-items: center;
     overflow: hidden;
 
-    padding: 0 180px;
+    padding: 0 120px 0 100px;
     color: #fff;
     white-space: nowrap;
 
@@ -186,7 +262,7 @@
 
 .main_visual .visual_content .itm_box img {
     color: #ddd;
-    height: 100px;
+    width: 80px;
     margin-right: 16px;
 }
 
@@ -213,6 +289,10 @@
     gap: 30px;
 }
 
+.main_contents .inner>* {
+    flex: 1;
+}
+
 .main_contents .inner .txt {
     background: #f9f9f9;
     padding: 48px;
@@ -222,6 +302,8 @@
     display: block;
     font-size: 24px;
     font-weight: 800;
+    height: 64px;
+    line-height: 32px;
     color: #4a484c;
     margin-bottom: 16px;
 }
@@ -230,7 +312,7 @@
     color: #817e7e;
     font-weight: 600;
     margin-bottom: 40px;
-    /* min-height: 48px; */
+    min-height: 100px;
 }
 
 .main_contents .inner .txt em {
@@ -248,4 +330,23 @@
     padding: 8px;
     color: #fff;
     vertical-align: -6px;
+}
+
+.main_banner {
+    padding: 0;
+}
+
+
+.search {
+    position: relative;
+}
+
+#search {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(26, 25, 29, 1);
+    width: 400px;
+    z-index: 1000;
 }
