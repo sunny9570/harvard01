@@ -17,6 +17,9 @@
     <script src="./js/aos.js"></script>
     <script src="./js/jquery.mb.YTPlayer.min.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/typed_cdn.js"></script>
+    <script src="./js/jquery.waypoints.js"></script>
+    <script src="./js/core.min.js"></script>
     <script src="./js/customer.js"></script>
 </head>
 
@@ -34,7 +37,7 @@
                     <form action="" id="search">
                         <input type="text">
                         <button> <i class="xi-search"></i></button>
-                        <span class="close"><i class="xi-close"></i></span>
+                        <span class="close">close<i class="xi-close"></i></span>
                     </form>
                 </div>
                 <button class="mbtn">
@@ -223,15 +226,23 @@
         </section>
 
         <section class="main_banner  mb01">
-            <div class="title desc">
-                <h2>Making sense of how people who are <br>
-                    blind ‘see’ color</h2>
-                <p>Harvard researchers have found that despite experiencing color differently, both blind and <br>
-                    sighted people share a common understanding of the concept.</p>
-                <div class="btn">
-                    <a href="">more <i class="xi-plus"></i></a>
+            <div class="inner">
+                <div class="left">
+                    01
                 </div>
-
+                <div class="right">
+                    <div class="title desc">
+                        <h2>Making sense of how people who are <br>
+                            blind ‘see’ color</h2>
+                        <p>Harvard researchers have found that despite experiencing color differently, both blind and
+                            <br>
+                            sighted people share a common understanding of the concept.
+                        </p>
+                        <div class="btn">
+                            <a href="">more <i class="xi-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="main_professor">
@@ -247,15 +258,11 @@
                 </div>
                 <div class="right">
                     <div class="txt">
-                        <strong class="first" data-txt="Touch is much more than just conscious perception ">
-                            Touch is much more than just conscious perception
-                        </strong>
-                        <strong class="second" data-txt="of what you are actively reaching out to feel, or ">
-                            of what you are actively reaching out to feel, or
-                        </strong>
-                        <strong class="third" data-txt="  what is touching your skin.” ">
+                        <p class="txt_ani">
+                            Touch is much more than just conscious perception <br>
+                            of what you are actively reaching out to feel, or <br>
                             what is touching your skin.”
-                        </strong>
+                        </p>
                         <p>“Most people don’t think about touch very much until there's something wrong with it,”
                             said<br>
                             April Levin, Harvard Medical School assistant professor of neurology at Boston Children’s
@@ -269,15 +276,152 @@
                                 <a href=""> more <i class="xi-plus"></i></a>
                             </div>
                         </div>
+                        <figure class="quote"><img src="./images/quote-small-crimson.png" alt=""></figure>
 
                     </div>
                 </div>
             </div>
         </section>
+
+
+        <section class="main_video">
+            <div class="inner">
+                <div class="left">
+                    <div class="ytb">
+                        <iframe width="1250" height="703" src="https://www.youtube.com/embed/iCtxnbMeOLo"
+                            title="Jess Kanwal | Harvard Horizons 2019" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="title desc">
+                        <h2>How does flavor work?</h2>
+                        <p>During the Harvard Horizons talks and on the “Veritalk” podcast, Harvard alum Jess Kanwal
+                            explains <br>
+                            that our brain’s ability to combine taste and smell is just one example of how we are able
+                            to mix and <br>
+                            match senses — with very interesting results.</p>
+                    </div>
+                    <div class="music_box">
+                        <figure>
+                            <img src="./images/veritalk-series6-3000px (1).jpg" alt="">
+                        </figure>
+                        <div class="title_box">
+                            <p>Veritalk <em>S7:EP3</em>
+                            </p>
+                            <div class="txt_wrap">
+                                <div class="txt"><strong>
+                                        Sensing Episode 3: Flavor on the Brain</strong></div>
+                                <div class="txt"><strong>
+                                        Sensing Episode 3: Flavor on the Brain</strong></div>
+                            </div>
+
+                            <div class="btn">
+                                <a href=""> play <i class="xi-plus"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+        <section class="main_smell_vision">
+            <div class="title desc">
+                <h2>Smell-O-Vision</h2>
+                <p>Odors take a direct route to the limbic system which is involved with emotion and memory, which is
+                    why often the nose knows<br> before our other senses can catch up.</p>
+            </div>
+
+            <div class="inner">
+                <div class="mainVisionSlide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide itm">
+                            <figure><img src="./images/content01.jpg" alt=""></figure>
+                            <strong>The science of sniffing</strong>
+                            <p>Lean how scent, emotion, and memory are intertwined.</p>
+                            <div class="btn_box">
+                                <em>Ewplore the olfactory findins</em>
+                                <i class="xi-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="swiper-slide itm">
+                            <figure><img src="./images/content02.jpg" alt=""></figure>
+                            <strong>sdf</strong>
+                            <p>ajldkjd</p>
+                            <div class="btn_box">
+                                <em>Ewplore the olfactory findins</em>
+                                <i class="xi-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="swiper-slide itm">
+                            <figure><img src="./images/content03.jpg" alt=""></figure>
+                            <strong>sdf</strong>
+                            <p>ajldkjd</p>
+                            <div class="btn_box">
+                                <em>Ewplore the olfactory findins</em>
+                                <i class="xi-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="swiper-slide itm">
+                            <figure><img src="./images/content01.jpg" alt=""></figure>
+                            <strong>sdf</strong>
+                            <p>ajldkjd</p>
+                            <div class="btn_box">
+                                <em>Ewplore the olfactory findins</em>
+                                <i class="xi-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="swiper-slide itm">
+                            <figure><img src="./images/content02.jpg" alt=""></figure>
+                            <strong>sdf</strong>
+                            <p>ajldkjd</p>
+                            <div class="btn_box">
+                                <em>Ewplore the olfactory findins</em>
+                                <i class="xi-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="swiper-slide itm">
+                            <figure><img src="./images/content03.jpg" alt=""></figure>
+                            <strong>sdf</strong>
+                            <p>ajldkjd</p>
+                            <div class="btn_box">
+                                <em>Ewplore the olfactory findins</em>
+                                <i class="xi-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main_banner02  mb02">
+            <div class="inner">
+                <div class="left">
+                    01
+                </div>
+                <div class="right">
+                    <div class="title desc">
+                        <h2>Octopus senses</h2>
+                        <p>Harvard scientists have identified a novel family of sensors in the first layer of cells
+                            inside<br>
+                            the suction cups of octopus tentacles that have adapted to react and detect molecules<br>
+                            that don’t dissolve well in water, which may help them figure out what it’s touching and
+                            <br>
+                            whether that object is prey.
+                        </p>
+                        <div class="btn">
+                            <a href="">more <i class="xi-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
     </main>
 
 
-    <footer id="footer">
+    <footer id="footer" style="height: 100vh;">
 
     </footer>
 

@@ -1,4 +1,14 @@
 $(function () {
+
+    $(window).on('scroll', function () {
+        let sct = $(window).scrollTop();
+        if (sct > 0) {
+            $('#header').addClass('on')
+        } else {
+            $('#header').removeClass('on')
+        }
+    });
+
     $('#header .mbtn').on('click', function () {
         $(this).toggleClass('on');
         $('#header .gnb').toggleClass('on');
@@ -65,4 +75,79 @@ $(function () {
 
     AOS.init();
 
+});
+
+
+
+$(function () {
+
+    const typewriter = new Typewriter('.txt_ani', {
+        strings: ['Touch is much more than just conscious perception <br> of what you are actively reaching out to feel <br> or what is touching your skin.'],
+        autoStart: true,
+        // loop: true
+    });
+
+
+    //typewriter.start();
+
+
+    $(window).on('scroll', function () {
+        let sct = $(window).scrollTop();
+
+        let ust = $('.main_professor').offset().top;
+
+
+        if (sct > ust - 300) {
+            console.log('start');
+            typewriter.start();
+        } else {
+            typewriter.pause();
+        }
+    })
+
+});
+
+// $(function () {
+
+
+
+
+//     const typed = new Typed('.txt_ani', {
+//         strings: ['Touch is much more than just conscious perception<br> of what you are actively reaching out to feel,<br> or what is touching your skin."'],
+//         typeSpeed: 80,
+//         backSpeed: 100,
+//         fadeOut: true,
+//         //smartBackspace: true,
+//         cursorChar: '',
+//         // loop: true
+//     });
+
+//     typed.stop();
+
+
+//     $(window).on('scroll', function () {
+//         let sct = $(window).scrollTop();
+//         let v = Math.floor(sct / 10)
+//         //console.log('start')
+//         console.log(v)
+
+//         if (v > 300) {
+//             console.log('start');
+//             typed.start();
+//         }
+//     })
+
+// });
+
+
+$(function () {
+    const mainVisionSlide = new Swiper('.mainVisionSlide', {
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+
+    })
 })
+
+
+

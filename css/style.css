@@ -1,9 +1,17 @@
+* {
+    /* outline: 1px solid tomato; */
+}
+
 #header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 999;
+}
+
+#header.on {
+    background: #615f5f;
 }
 
 #header .inner {
@@ -21,13 +29,28 @@
     z-index: 999;
 }
 
+
+#heade.on h1 {
+    height: 80px;
+}
+
 #header h1 img {
     height: 56px;
 }
 
+#header.on h1 img {
+    height: 48px;
+}
+
 #header .utils {
     display: flex;
+    align-items: flex-start;
     gap: 4px;
+}
+
+#header.on .utils {
+    align-items: center;
+
 }
 
 #header .utils button {
@@ -35,6 +58,12 @@
     z-index: 999;
     background: rgba(26, 25, 29, 0.8);
     padding: 16px 40px;
+}
+
+#header.on .utils button {
+    background: none;
+    background: #4d4b4b;
+
 }
 
 #header .utils button strong {
@@ -61,8 +90,14 @@
     top: 0;
     right: 0;
     background: rgba(26, 25, 29, 1);
-    width: 400px;
+    padding: 16px 16px 16px 40px;
+    width: 448px;
     z-index: 1000;
+}
+
+#header .utils #search span {
+    color: #fff;
+    font-size: 14px;
 }
 
 #header .mbtn {}
@@ -358,32 +393,25 @@
 
 .main_banner {
     position: relative;
-    padding: 200px 0;
-    background: url(../images/main_banner01.jpg) no-repeat center/cover;
+    padding: 100px 0;
+    background: url(../images/main_banner011.jpg) no-repeat center/cover;
 }
 
-
-.main_banner::before {
-    content: "";
-    position: absolute;
-    inset: 0 0 0 0;
-    z-index: 2;
-    background: linear-gradient(to right, rgba(0, 0, 0, 1)1%, rgba(0, 0, 0, 0)45%, rgba(0, 0, 0, 1)50%);
+.main_banner .inner {
+    display: flex;
 }
 
-.main_banner .title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 3;
-    transform: translate(0, -50%);
+.main_banner .inner>* {
+    flex: 1;
 }
+
+.main_banner .title {}
 
 .main_banner .title h2 {
     font-size: 40px;
     color: #fff;
     margin-bottom: 16px;
-    line-height: 48px;
+    line-height: 52px;
 
 }
 
@@ -392,6 +420,8 @@
     margin-bottom: 40px;
 
 }
+
+.main_banner .title .btn {}
 
 .main_banner .title .btn a {
     display: inline-block;
@@ -408,17 +438,11 @@
 }
 
 .main_professor {
+    position: relative;
     padding: 200px 0;
 }
 
-.main_professor .title {
-    display: flex;
-    align-items: center;
-    gap: 120px;
-    margin: 0 auto 56px auto;
-    border-bottom: 3px solid #575757;
-    padding-bottom: 16px;
-}
+
 
 .main_professor .inner {
     display: flex;
@@ -433,46 +457,34 @@
     align-items: center;
 }
 
-.main_professor .right strong {
+.main_professor .title {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    margin: 0 auto 56px auto;
+    border-bottom: 3px solid #575757;
+    padding-bottom: 16px;
+}
+
+.main_professor .right .txt_ani {
     display: block;
     font-size: 24px;
     font-weight: 600;
     line-height: 40px;
-    color: #b9b7b7;
+    color: #585858;
+    height: 120px;
 }
 
-.main_professor .right .first {
-    position: relative;
-
-}
-
-.main_professor .right .first::after {
-    content: attr(data-txt);
+.main_professor .right .quote {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    overflow: hidden;
-    color: #444;
-    /* border-right: 1px solid #444; */
-
-    animation: txt 4s steps(20);
+    top: 37.5%;
+    left: 50%;
+    transform: translate(-70%, 0);
 }
 
-@keyframes txt {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 100%;
-    }
-
-    /* 100% {
-        width: 0;
-    } */
+.main_professor .right .quote img {
+    height: 80px;
 }
-
 
 .main_professor .right p {
     margin: 16px 0 24px 0;
@@ -487,14 +499,16 @@
     margin-bottom: 40px;
 }
 
+.main_professor .right .btn_box p {
+    font-weight: 900;
+    margin-right: 40px;
+    color: #817e7e;
+    font-size: 16px;
+}
+
 .main_professor .right .btn_box {
     display: flex;
     align-items: center;
-}
-
-.main_professor .right .btn_box p {
-    font-weight: 800;
-    margin-right: 40px;
 }
 
 .main_professor .right .btn_box a {
@@ -505,6 +519,165 @@
 }
 
 .main_professor .right .btn_box i {
+    vertical-align: -2px;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+.main_video {
+    background: #ddd;
+    padding: 100px 0;
+}
+
+.main_video .inner {
+    display: flex;
+    gap: 40px;
+}
+
+.main_video .inner>* {
+    flex: 1;
+}
+
+.main_video .ytb iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.main_video .right {
+    padding-top: 16px;
+}
+
+.main_video .title {
+    margin-bottom: 40px;
+}
+
+.main_video .music_box {
+    display: flex;
+    background: #fff;
+    padding: 24px 32px 0 24px;
+}
+
+.main_video .music_box figure {
+    margin-bottom: -32px;
+}
+
+.main_video .title_box {
+    padding-left: 24px;
+}
+
+.main_video .title_box p {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.main_video .title_box strong {
+    display: block;
+    font-weight: 800;
+    margin: 4px 0 12px 0;
+}
+
+.main_video .txt_wrap {
+    display: flex;
+    overflow: hidden;
+}
+
+.main_video .txt_wrap .txt {
+    white-space: nowrap;
+    animation: txtMove 16s infinite linear;
+}
+
+/* .main_video .txt_wrap .txt:nth-child(even) {
+    -webkit-text-stroke: 1px var(--font-color);
+    color: transparent;
+
+} */
+
+@keyframes txtMove {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+.main_video .title_box .btn {
+    margin-bottom: 24px;
+}
+
+.main_video .title_box .btn a {
+    display: inline-block;
+    color: #fff;
+    background: #585858;
+    padding: 10px 28px;
+    font-size: 14px;
+}
+
+.main_video .title_box .btn i {
+    vertical-align: -2px;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+.main_smell_vision {
+    padding: 200px 0;
+}
+
+.main_smell_vision .title {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    margin: 0 auto 56px auto;
+    border-bottom: 3px solid #575757;
+    padding-bottom: 16px;
+}
+
+.main_smell_vision .inner {
+    overflow: hidden;
+}
+
+.main_banner02 {
+    position: relative;
+    padding: 100px 0;
+    background: url(../images/main_banner02.jpg) no-repeat center/cover;
+}
+
+.main_banner02 .inner {
+    display: flex;
+}
+
+.main_banner02 .inner>* {
+    flex: 1;
+}
+
+.main_banner02 .title {}
+
+.main_banner02 .title h2 {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 16px;
+    line-height: 52px;
+
+}
+
+.main_banner02 .title p {
+    color: #fff;
+    margin-bottom: 40px;
+
+}
+
+.main_banner02 .title .btn {}
+
+.main_banner02 .title .btn a {
+    display: inline-block;
+    color: #fff;
+    background: #a51c30;
+    padding: 16px 32px;
+}
+
+
+.main_banner02 .title .btn i {
     vertical-align: -2px;
     margin-left: 8px;
     font-size: 14px;
