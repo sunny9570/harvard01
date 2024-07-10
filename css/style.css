@@ -90,14 +90,25 @@
     top: 0;
     right: 0;
     background: rgba(26, 25, 29, 1);
-    padding: 16px 16px 16px 40px;
+    padding: 2px 16px 2px 40px;
     width: 448px;
     z-index: 1000;
 }
 
+#header.on .utils #search {
+    background: #4d4b4b;
+}
+
 #header .utils #search span {
-    color: #fff;
+    color: #ddd;
     font-size: 14px;
+    padding: 4px 8px;
+}
+
+#header .utils #search span i {
+    margin-left: 8px;
+    font-size: 12px;
+    vertical-align: -1px;
 }
 
 #header .mbtn {}
@@ -636,6 +647,76 @@
 .main_smell_vision .inner {
     overflow: hidden;
 }
+
+.main_smell_vision .itm {
+    position: relative;
+    overflow: hidden;
+}
+
+.main_smell_vision .itm:hover::before {
+    position: absolute;
+    content: "";
+    inset: 0 0 0 0;
+    z-index: 5;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1)10%, rgba(0, 0, 0, 0.5)70%, rgba(0, 0, 0, 0));
+}
+
+.main_smell_vision .itm:hover img {
+    transform: scale(1.2);
+}
+
+.main_smell_vision .itm .txt {
+    position: absolute;
+    z-index: 6;
+    bottom: 0;
+    transform: translate(0, 0);
+    padding: 0 40px 40px 40px;
+}
+
+.main_smell_vision .itm .txt strong {
+    display: block;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.main_smell_vision .itm .txt p {
+    display: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 16px;
+}
+
+.main_smell_vision .itm:hover .txt p {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.main_smell_vision .itm .txt .btn_box {
+    display: flex;
+    align-items: center;
+}
+
+.main_smell_vision .itm .txt .btn_box em {
+    font-size: 14px;
+    font-weight: 800;
+    color: #ddd;
+}
+
+.main_smell_vision .itm .txt .btn_box i {
+    color: #fff;
+    margin-left: 24px;
+    background: #817e7e;
+    padding: 8px;
+    border-radius: 50%;
+
+
+}
+
 
 .main_banner02 {
     position: relative;
