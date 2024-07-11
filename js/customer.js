@@ -82,14 +82,14 @@ $(function () {
 $(function () {
 
     const typewriter = new Typewriter('.txt_ani', {
-        strings: ['Touch is much more than just conscious perception <br> of what you are actively reaching out to feel <br> or what is touching your skin.'],
-        autoStart: true,
-        // loop: true
+        //autoStart: true,
+        //loop: true
     });
 
 
     //typewriter.start();
 
+    let swc = false;
 
     $(window).on('scroll', function () {
         let sct = $(window).scrollTop();
@@ -97,11 +97,12 @@ $(function () {
         let ust = $('.main_professor').offset().top;
 
 
-        if (sct > ust - 300) {
-            console.log('start');
-            typewriter.start();
-        } else {
-            typewriter.pause();
+        if ((sct > ust - 300) && (swc == false)) {
+            typewriter
+                .deleteAll()
+                .typeString('Touch is much more than just conscious perception <br> of what you are actively reaching out to feel <br> or what is touching your skin.')
+                .start();
+            swc = true;
         }
     })
 
@@ -145,9 +146,38 @@ $(function () {
         loop: true,
         slidesPerView: 3,
         spaceBetween: 30,
+        pagination: {
+            el: '.mainVisionSlide .dots',
+            clickable: true,
+        }
 
-    })
-})
+    });
+
+
+
+    // $('.main_smell_vision .itm').on('mouseenter', function () {
+    //     $(this).find('p').slideDown();
+    // });
+
+
+    // $('.main_smell_vision .itm').on('mouseleave', function () {
+    //     $(this).find('p').slideUp();
+    // })
+
+
+
+    $('#bgndVideo').YTPlayer({
+        videoURL: 'https://youtu.be/YGFkitvR_-g',
+        containment: '.main_banner03 ',
+        // 아래 뒤에 값 없애고 showControls: false더하면 유투브재생버튼없어짐
+        showControls: false,
+        playOnlyIfVisible: true,
+        // playOnlyIfVisible동영상이 돌아갈때만 재생
+
+    });
+
+});
+
 
 
 
